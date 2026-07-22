@@ -61,7 +61,14 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-slate-50 overflow-x-hidden relative">
+      {/* Watermark Overlay */}
+      <div className="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center overflow-hidden">
+        <div className="transform -rotate-45 text-[8vw] sm:text-[10vw] font-black text-black/15 select-none whitespace-nowrap drop-shadow-sm">
+          VERSÃO DE DEMONSTRAÇÃO
+        </div>
+      </div>
+
       <Header />
       <main className="flex-grow">
         <Hero onOpenQuiz={() => setIsQuizOpen(true)} />
