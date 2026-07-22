@@ -38,7 +38,7 @@ const Testimonials = () => {
               A confiança de quem já teve seu direito garantido
             </h3>
             <p className="text-slate-300 mb-8 leading-relaxed">
-              Nosso maior orgulho não são apenas os processos vencidos, mas a tranquilidade devolvida a cada família que atendeos.
+              Nosso maior orgulho não são apenas os processos vencidos, mas a tranquilidade devolvida a cada família que atendemos.
             </p>
             
             <div className="flex items-center gap-4 bg-white/10 p-6 rounded-2xl border border-white/10">
