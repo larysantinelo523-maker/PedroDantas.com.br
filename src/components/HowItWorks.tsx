@@ -1,4 +1,5 @@
 import { MessageCircle, FileCheck, Gavel, ThumbsUp, Coffee } from 'lucide-react';
+import { RevealOnScroll } from './RevealOnScroll';
 
 const HowItWorks = () => {
   const steps = [
@@ -37,7 +38,7 @@ const HowItWorks = () => {
   return (
     <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <RevealOnScroll className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-brand-gold font-semibold tracking-wider uppercase text-sm mb-3">
             Como Funciona
           </h2>
@@ -47,15 +48,15 @@ const HowItWorks = () => {
           <p className="text-lg text-slate-600">
             Sabemos que burocracia causa ansiedade. Por isso, desenhamos um fluxo de atendimento para tirar o peso das suas costas.
           </p>
-        </div>
+        </RevealOnScroll>
 
         <div className="relative">
           {/* Connecting line for desktop */}
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2 z-0"></div>
           
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8 relative z-10">
-            {steps.map((step) => (
-              <div key={step.id} className="relative bg-white rounded-2xl p-6 shadow-sm border border-slate-100 lg:border-none lg:shadow-none text-center group hover:-translate-y-2 transition-transform duration-300">
+            {steps.map((step, index) => (
+              <RevealOnScroll key={step.id} delay={index + 1} className="relative bg-white rounded-2xl p-6 shadow-sm border border-slate-100 lg:border-none lg:shadow-none text-center group hover:-translate-y-2 transition-transform duration-300">
                 <div className="w-16 h-16 mx-auto bg-brand-navy text-brand-gold rounded-full flex items-center justify-center mb-6 shadow-lg shadow-brand-navy/20 relative">
                   {step.icon}
                   <div className="absolute -top-2 -right-2 w-6 h-6 bg-brand-gold text-brand-navy rounded-full text-xs font-bold flex items-center justify-center">
@@ -68,7 +69,7 @@ const HowItWorks = () => {
                 <p className="text-slate-600 text-sm leading-relaxed">
                   {step.description}
                 </p>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>

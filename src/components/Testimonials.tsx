@@ -1,4 +1,5 @@
 import { Star, Quote } from 'lucide-react';
+import { RevealOnScroll } from './RevealOnScroll';
 
 const Testimonials = () => {
   const testimonials = [
@@ -30,7 +31,7 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-12 items-center">
           
-          <div className="lg:col-span-1">
+          <RevealOnScroll className="lg:col-span-1">
             <h2 className="text-brand-gold font-semibold tracking-wider uppercase text-sm mb-3">
               Depoimentos
             </h2>
@@ -52,14 +53,11 @@ const Testimonials = () => {
                 <p className="text-sm text-slate-300">Baseado em 58 avaliações no Google</p>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
           
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
             {testimonials.map((testimonial, idx) => (
-              <div 
-                key={testimonial.id} 
-                className={`bg-white text-slate-800 rounded-2xl p-8 shadow-xl relative ${idx === 2 ? 'sm:col-span-2 lg:col-span-1' : ''}`}
-              >
+              <RevealOnScroll key={testimonial.id} delay={idx + 1} className={`bg-white text-slate-800 rounded-2xl p-8 shadow-xl relative ${idx === 2 ? 'sm:col-span-2 lg:col-span-1' : ''}`}>
                 <Quote className="w-10 h-10 text-brand-gold/20 absolute top-6 right-6" />
                 <div className="flex text-brand-gold mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -78,7 +76,7 @@ const Testimonials = () => {
                     <p className="text-xs text-slate-500">{testimonial.role}</p>
                   </div>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
 

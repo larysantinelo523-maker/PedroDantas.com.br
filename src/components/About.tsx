@@ -1,4 +1,5 @@
 import { HeartHandshake, Scale, Award } from 'lucide-react';
+import { RevealOnScroll } from './RevealOnScroll';
 
 const About = () => {
   return (
@@ -6,7 +7,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          <div className="order-2 lg:order-1 relative max-w-[392px] mx-auto lg:ml-auto lg:mr-8 w-full">
+          <RevealOnScroll className="order-2 lg:order-1 relative max-w-[392px] mx-auto lg:ml-auto lg:mr-8 w-full">
             <div className="absolute -inset-4 bg-slate-100 rounded-3xl transform -rotate-3 z-0"></div>
             <img 
               src="/assets/reuniao.jpg" 
@@ -31,9 +32,9 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
 
-          <div className="order-1 lg:order-2">
+          <RevealOnScroll delay={1} className="order-1 lg:order-2">
             <h2 className="text-brand-gold font-semibold tracking-wider uppercase text-sm mb-3">
               Sobre o Escritório
             </h2>
@@ -75,7 +76,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
           
         </div>
       </div>
