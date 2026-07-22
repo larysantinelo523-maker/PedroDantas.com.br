@@ -1,4 +1,4 @@
-import { Scale } from 'lucide-react';
+
 
 const Footer = () => {
   return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Scale } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 function smoothScroll(targetY: number, duration: number) {
   const startY = window.scrollY;
