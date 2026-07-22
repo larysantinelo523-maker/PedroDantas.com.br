@@ -16,20 +16,20 @@ const Hero = ({ onOpenQuiz }: HeroProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-navy-light border border-brand-gold/30 text-brand-gold text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-navy-light border border-brand-gold/30 text-brand-gold text-sm font-medium mb-6 opacity-0 animate-fade-in-up">
               <ShieldCheck className="w-4 h-4" />
               <span>Especialistas em Direito Previdenciário</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 opacity-0 animate-fade-in-up-delay-1">
               Benefício negado <br/> pelo <span className="text-brand-gold">INSS?</span>
             </h1>
             
-            <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-xl">
+            <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-xl opacity-0 animate-fade-in-up-delay-1">
               Não desista dos seus direitos. Nossa equipe especializada está pronta para analisar o seu caso e reverter a decisão do INSS. Você não está sozinho nessa luta.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 mb-10 opacity-0 animate-fade-in-up-delay-2">
               <button 
                 onClick={onOpenQuiz}
                 className="inline-flex justify-center items-center gap-2 bg-brand-gold text-brand-navy px-8 py-4 rounded-lg font-bold text-lg transition-all hover:bg-brand-gold-light hover:scale-105 shadow-lg shadow-brand-gold/20"
@@ -39,7 +39,7 @@ const Hero = ({ onOpenQuiz }: HeroProps) => {
               </button>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10 opacity-0 animate-fade-in-up-delay-2">
               <div>
                 <p className="text-3xl font-bold text-white mb-1">4.9</p>
                 <div className="flex text-brand-gold mb-1">
@@ -70,7 +70,7 @@ const Hero = ({ onOpenQuiz }: HeroProps) => {
             </div>
           </div>
           
-          <div className="relative mt-12 lg:mt-0">
+          <div className="relative mt-12 lg:mt-0 opacity-0 animate-fade-in-right-delay">
             {/* Using a placeholder for a professional law firm image */}
             <img 
               src="/assets/hero.jpg" 
